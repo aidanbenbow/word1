@@ -1,0 +1,58 @@
+.title{
+    color: rgb(176, 176, 85);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter{
+display: grid;
+justify-content: center;
+align-content: center;
+flex-grow: 1;
+grid-template-columns: repeat(5,4em);
+grid-template-rows: repeat(6,4em);
+gap: .25em;
+margin-bottom: 1em;
+}
+
+.letterInput{
+    gap: 5px;
+    font-size: large;
+}
+
+.tile{
+    font-size: 2em;
+    color: aliceblue;
+    border: .05em solid bisque;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mb-10{
+    margin-bottom: 20px;
+}
+
+.mt-10{
+    margin-top: 50px;
+}
+
+.order{
+    gap: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+#inputOrder{
+    padding: 10px;
+    font-size: large;
+}

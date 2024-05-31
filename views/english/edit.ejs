@@ -1,0 +1,60 @@
+<form action="/english/animalgame" method="post" enctype="multipart/form-data">
+    
+
+<div class="article-pic">
+    <label for="pic">Pic</label>
+    <input type="file" name="pic" id="article-pic">
+</div>
+
+<div class="picname">
+    <label for="picname">picname</label>
+    <input type="text" name="picname" id="picname">
+</div>
+
+<div class="memgame">
+    <label for="game">game</label>
+    <input type="text" name="game" id="game">
+</div>
+
+    <div class="article-save-btn">
+<button type="submit" id="article-btn">save</button>
+</div>
+</form>
+
+<div class="sliderWidth">
+    <label >width</label>
+    <input type="range" min="10" step="10" >
+</div>
+
+
+<div class="imgWidth">
+    <label >width</label>
+    <input type="number" >
+</div>
+<div class="imgHeight">
+    <label>Height</label>
+    <input type="number">
+                    </div>
+
+<canvas id="canvas1"></canvas>
+
+<div class="images-container">
+    
+    <% images.forEach( image =>{%>
+        <div class="item">
+        <div class="img-title">
+        <%= image.name %> </div>
+
+        <div class="img-image">
+            <img src="https://images-memgame.s3.eu-north-1.amazonaws.com/<%= image.name%>" alt="cardimg">
+        </div>
+      
+        
+    <form action="/english/<%= image.id%>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+    </form>
+</div>
+    <% }) %>
+            </div>
+
+<script src="../js/editpic.js"></script>

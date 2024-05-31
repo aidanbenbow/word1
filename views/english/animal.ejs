@@ -1,0 +1,79 @@
+
+<div class="game-title">
+    <h2>Animal names Card Match</h2>
+</div>
+
+<div class="game-container">
+
+    <div class="game-overlay-over">
+        <div class="game-over">You Won</div>  
+        
+         <div class="game-hi-scores">
+          Hi-scores
+          <form action="/english/animal" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" maxlength="5">
+            
+         <label for="hiScore">score</label>
+         <input type="text" name="hiScore" id="hiScore" >
+
+         <label for="game">game</label>
+         <input type="text" name="game" id="game" value="<%=type%>" >
+          
+          <button type="submit" class="hi-score-btn">Save</button>
+        </div>
+        </form>
+        
+         </div>
+        
+
+    <div class="game-overlay-start visible">
+      <div class="start">Click to Start Game</div>  
+       <div class="game-instructions">
+        Find Matches
+       </div> 
+    </div>
+    <div class="game-info">
+        <div class="flips">Flips <span id="flips">0</span></div>
+
+        <% scores.forEach(score =>{ %>
+            <div class="hi-one">
+                <div class="hi-name"> <%= score.name%> <span id="hi-score"><%= score.hiScore%> </span></div>
+            </div>
+      <%  }) %>
+        
+    
+    </div>
+
+    <ul class="cardscontainer">
+        
+        <% animals.forEach(animal =>{ %>
+            
+
+            <li class="thecard" data-animal="<%= animal.name%>">
+                <div class="thefront">
+                    <ion-icon name="help-outline"></ion-icon>
+                </div>
+                <div class="theback">
+                    <img src="https://images-memgame.s3.eu-north-1.amazonaws.com/<%= animal.name%>" alt="cardimg">
+                </div>
+            </li>
+            <li class="thecard" data-animal="<%= animal.name%>">
+                <div class="thefront">
+                    <ion-icon name="help-outline"></ion-icon>
+                </div>
+                <div class="theback">
+                    <img src="https://images-memgame.s3.eu-north-1.amazonaws.com/<%= animal.name%>" alt="cardimg">
+                </div>
+            </li>
+          
+               
+      <%  }) %>
+       
+    
+    </ul>
+    
+</div>
+
+<script src="../js/mem.js"></script>

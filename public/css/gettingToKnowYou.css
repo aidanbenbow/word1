@@ -1,0 +1,32 @@
+.question-container{
+    background-color: antiquewhite;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    background-color: azure;
+    margin: 10px;
+}
+
+#question{
+    padding: 30px;
+    margin: 10px;
+    font-size: 1.6em;
+    color: darkblue;
+    font-weight: bold;
+    resize: none;
+}
+
+.question-btn{
+    padding: 2px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: sandybrown;
+    cursor: pointer;
+    font-size: 1.3em;
+    color: blueviolet;
+
+}
